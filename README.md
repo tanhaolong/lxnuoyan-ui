@@ -1,7 +1,7 @@
 <!--
  * @Author: 
  * @Date: 2021-12-03 14:13:34
- * @LastEditTime: 2021-12-15 10:38:39
+ * @LastEditTime: 2021-12-15 11:37:45
  * @LastEditors: tanhaolong
  * @Descripttion: 
 -->
@@ -13,6 +13,9 @@
 npm i lxnuoyan-ui
 ```
 ## 使用说明
+### 一、使用要求
+组件库基于Vue3.0中开发，请在Vue3.0版本以上使用。
+
 ### 一、全局引用
 在src/main.js中引用添加组件并注册
 ```bash
