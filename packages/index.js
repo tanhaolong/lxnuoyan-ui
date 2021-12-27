@@ -1,7 +1,7 @@
 /*
  * @Author: 
  * @Date: 2021-12-03 14:26:48
- * @LastEditTime: 2021-12-16 14:59:35
+ * @LastEditTime: 2021-12-24 15:10:10
  * @LastEditors: tanhaolong
  * @Descripttion: 
  */
@@ -19,10 +19,14 @@ import Numeral from "./Numeral/index.js";
 import Actionsheet from "./Actionsheet/index.js";
 import Switch from "./Switch/index.js";
 import Evaluate from "./Evaluate/index.js";
+import Rate from "./Rate/index.js";
+import NavBar from "./NavBar/index.js";
+import Tabbar from "./Tabbar/index.js";
+import TabbarItem from "./TabbarItem/index.js";
 import './index.css';
 
 // 存储组件列表
-const components = [Dialog,Cell,Empty,Tag,CountUp,Ellipsis,Actionsheet,Switch,Evaluate];
+const components = [Dialog,Cell,Empty,Tag,CountUp,Ellipsis,Actionsheet,Switch,Evaluate,Rate,NavBar,Tabbar,TabbarItem];
 // 定义 install 方法，接收 Vue 作为参数。如果使用 use 注册插件，则所有的组件都将被注册
 const install = function(Vue) {
   // 判断是否安装
@@ -44,5 +48,5 @@ export default {
   // 导出的对象必须具有 install，才能被 Vue.use() 方法安装
   install,
   // 以下是具体的组件列表
-  Dialog,Cell,Empty,Tag,CountUp,Ellipsis,Actionsheet,Switch,Evaluate
+  Dialog,Cell,Empty,Tag,CountUp,Ellipsis,Actionsheet,Switch,Evaluate,Rate,NavBar,Tabbar,TabbarItem
 };

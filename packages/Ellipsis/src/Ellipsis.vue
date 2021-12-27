@@ -1,13 +1,13 @@
 <!--
  * @Author: 
  * @Date: 2021-12-13 14:22:27
- * @LastEditTime: 2021-12-13 14:54:16
+ * @LastEditTime: 2021-12-27 15:40:09
  * @LastEditors: tanhaolong
  * @Descripttion: 
 -->
 <template>
   <div class="ellipsis-box">
-      <p class="ellipsis-text" :style="[{WebkitLineClamp : lineClamp},ellipsisStyle]">{{text}}</p>
+      <div class="ellipsis-text" :style="[{WebkitLineClamp : lineClamp},ellipsisStyle]"><slot></slot></div>
   </div>
 </template>
 
@@ -17,10 +17,6 @@ export default{
   components:{},
   name: 'Ellipsis',
   props:{
-      text:{// 文本标题
-          type:String,
-          default:''
-      },
       ellipsisStyle:{ // 文本样式自定义
           type:Object,
           default:{}
