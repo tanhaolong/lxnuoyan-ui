@@ -1,12 +1,12 @@
 <!--
  * @Author: 
  * @Date: 2021-12-21 16:28:12
- * @LastEditTime: 2021-12-27 15:52:34
+ * @LastEditTime: 2021-12-28 11:48:04
  * @LastEditors: tanhaolong
  * @Descripttion: 
 -->`
 <template>
-  <div class="tabbar-box">
+  <div class="tabbar-box" :class="{'tabbar-fixed':fixed == true,'tabbar-border': border == true}">
       <slot></slot>    
   </div>
 </template>
@@ -19,6 +19,10 @@ export default{
   props:{
     modelValue:{ // 选中值
       type: String,
+    },
+    border:{ // 是否显示外边框
+      type:Boolean,
+      default:false,
     },
     fixed:{ // 是否固定在底部
       type:Boolean,
@@ -74,7 +78,7 @@ export default{
 
 <style scoped>
 .tabbar-box{
-    z-index: 1;
+    z-index: 500;
     display: -webkit-box;
     display: -webkit-flex;
     display: flex;
@@ -89,5 +93,8 @@ export default{
   position: fixed;
   bottom:0;
   left: 0;
+}
+.tabbar-border{
+  border-top:1px solid #d1d1d1;
 }
 </style>

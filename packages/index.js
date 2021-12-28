@@ -1,14 +1,15 @@
 /*
  * @Author: 
  * @Date: 2021-12-03 14:26:48
- * @LastEditTime: 2021-12-24 15:10:10
+ * @LastEditTime: 2021-12-28 15:39:17
  * @LastEditors: tanhaolong
  * @Descripttion: 
  */
 // 导入颜色选择器组件
+import './wrapper.js';
 import Dialog from "./Dialog/index.js";
 import Cell from "./Cell/index.js";
-import Message from "./Message/index.js";
+import Notify from "./Notify/index.js";
 import Toast from "./Toast/index.js";
 import Loading from "./Loading/index.js";
 import Empty from "./Empty/index.js";
@@ -26,27 +27,30 @@ import TabbarItem from "./TabbarItem/index.js";
 import './index.css';
 
 // 存储组件列表
-const components = [Dialog,Cell,Empty,Tag,CountUp,Ellipsis,Actionsheet,Switch,Evaluate,Rate,NavBar,Tabbar,TabbarItem];
+const components = {Dialog,Cell,Empty,Tag,CountUp,Ellipsis,Actionsheet,Switch,Evaluate,Rate,NavBar,Tabbar,TabbarItem};
+const commandcomponents = {Numeral,Notify,Toast,Loading};
+
 // 定义 install 方法，接收 Vue 作为参数。如果使用 use 注册插件，则所有的组件都将被注册
 const install = function(Vue) {
   // 判断是否安装
   if (install.installed) return;
   // 遍历注册全局组件
-  components.forEach(component => {
-    Vue.component(component.name, component)
-  });
-  Vue.config.globalProperties.$Numeral = Numeral;
-  Vue.config.globalProperties.$Message = Message;
-  Vue.config.globalProperties.$Toast = Toast;
-  Vue.config.globalProperties.$Loading = Loading;
+  for(let key in components){
+    Vue.component(components[key].name, components[key])
+  }
+  // 遍历注册指令组件
+  for(let key in commandcomponents){
+    Vue.config.globalProperties['$' + key] = commandcomponents[key];
+  }
 };
 // 判断是否是直接引入文件
 if (typeof window !== "undefined" && window.Vue) {
   install(window.Vue);
 }
+export {Dialog,Cell,Empty,Tag,CountUp,Ellipsis,Actionsheet,Switch,Evaluate,Rate,NavBar,Tabbar,TabbarItem,Numeral,Notify,Toast,Loading};
 export default {
   // 导出的对象必须具有 install，才能被 Vue.use() 方法安装
   install,
   // 以下是具体的组件列表
-  Dialog,Cell,Empty,Tag,CountUp,Ellipsis,Actionsheet,Switch,Evaluate,Rate,NavBar,Tabbar,TabbarItem
+  ...components
 };

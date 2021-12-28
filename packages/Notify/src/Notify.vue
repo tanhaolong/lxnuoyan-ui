@@ -1,7 +1,7 @@
 <!--
  * @Author: 
  * @Date: 2021-12-06 16:08:42
- * @LastEditTime: 2021-12-09 17:08:37
+ * @LastEditTime: 2021-12-28 13:48:46
  * @LastEditors: tanhaolong
  * @Descripttion: 
 -->
@@ -16,7 +16,7 @@
 <script>
 import { ref, onMounted } from 'vue'
 export default {
-  name: 'Message',
+  name: 'Notify',
   props: {
     text: { // 显示文本
       type: String,

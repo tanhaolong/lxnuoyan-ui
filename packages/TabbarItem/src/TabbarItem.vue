@@ -1,7 +1,7 @@
 <!--
  * @Author: 
  * @Date: 2021-12-24 15:06:04
- * @LastEditTime: 2021-12-27 15:52:27
+ * @LastEditTime: 2021-12-28 13:44:46
  * @LastEditors: tanhaolong
  * @Descripttion: 
 -->
@@ -26,14 +26,14 @@ export default{
         type:String,
         default:'',
       },
-      dot:{
+      dot:{ // 是否显示图标右上角小红点
         type:Boolean,
         default:null
       },
-      badge:{
+      badge:{ // 图标右上角徽标的内容
         type:String || Number,
         default:null
-      }
+      },
   },
   mounted(){
     
@@ -41,6 +41,7 @@ export default{
   setup(props,context){
     const ctx = reactive(getCurrentInstance());
     const tabbarChange = function(){
+      console.log(ctx,context);
       ctx.parent.proxy.selected = context.attrs.name;
     };
     return {
