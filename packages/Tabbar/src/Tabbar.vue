@@ -1,7 +1,7 @@
 <!--
  * @Author: 
  * @Date: 2021-12-21 16:28:12
- * @LastEditTime: 2021-12-28 11:48:04
+ * @LastEditTime: 2021-12-28 18:10:58
  * @LastEditors: tanhaolong
  * @Descripttion: 
 -->`
@@ -35,10 +35,6 @@ export default{
     selectColor:{// 选中图表字体颜色
       type:String,
       default:'#1989fa',
-    },
-    List:{ // tabbar列表项列表
-      type:Array,
-      default:[]
     },
   },
   setup(props,context){

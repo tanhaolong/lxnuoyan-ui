@@ -1,20 +1,20 @@
 <!--
  * @Author: 
  * @Date: 2021-12-20 15:24:25
- * @LastEditTime: 2021-12-21 14:52:20
+ * @LastEditTime: 2021-12-29 09:45:19
  * @LastEditors: tanhaolong
  * @Descripttion: 
 -->
 <template>
   <div class="NavBar-box">
       <div class="NavBar-content-box" :style="{position:fixed == true && 'fixed',top:fixed == true && '0px',left:fixed == true && '0px',zIndex:zIndex}">
-        <div class="left-box">
+        <div class="left-box" @click="leftClick">
             <i class="iconfont icon-left" v-if="leftArrow" :style="{color:leftColor}"></i>
             <slot name="left"></slot>
             <span v-if="leftText != ''" :style="{color:leftColor}">{{leftText}}</span>
         </div>
         <div class="NavBar-title" :style="{fontSize:size,color:color}"><slot name="title"></slot>{{title}}</div>
-        <div class="right-box"><slot name="right"></slot><span v-if="rightText != ''" :style="{color:rightColor}">{{rightText}}</span></div>
+        <div class="right-box" @click="rightClick"><slot name="right"></slot><span v-if="rightText != ''" :style="{color:rightColor}">{{rightText}}</span></div>
       </div>
       <div class="NavBar-placeholder" v-if="placeholder"></div>
   </div>
@@ -68,7 +68,15 @@ export default{
       }
   },
   setup(props,context){
+      const leftClick = function(){
+          context.emit('leftClick');
+      };
+      const rightClick = function(){
+          context.emit('rightClick');
+      }
     return {
+        leftClick,
+        rightClick,
     }
   },
 }

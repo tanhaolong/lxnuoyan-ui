@@ -1,7 +1,7 @@
 <!--
  * @Author: 
  * @Date: 2021-12-03 14:13:15
- * @LastEditTime: 2021-12-28 15:42:09
+ * @LastEditTime: 2021-12-29 09:41:16
  * @LastEditors: tanhaolong
  * @Descripttion: 
 -->
@@ -26,13 +26,16 @@
 </template>
 
 <script>
-import { getCurrentInstance,ref, onMounted } from "vue";
-import {Tabbar,TabbarItem} from '../packages/index';
+import { getCurrentInstance,ref,  } from "vue";
+// import {Notify} from '../packages/index';
 export default {
   name: 'App',
   components: {
     // Tabbar,
     // TabbarItem,
+  },
+  mounted(){
+    this.$Notify({text:'这是测试'});
   },
   setup(props,context) {
         const list = [{id:1,value:'测试内容1'},{id:2,value:'测试内容2'},{id:3,value:'测试内容3'}];
@@ -41,12 +44,12 @@ export default {
         const upstyle = {color:'red'};
         const active = ref('13');
         const { ctx } = getCurrentInstance(); //获取上下文实例
-         onMounted(() => {
-          //  console.log(ctx,localComponents);
-          //  Notify({text:'这是测试'});
-          //  ctx.$root.$Loading({type:true});
-          ctx.$root.$Notify({text:'这是测试'});
-    });
+    //      onMounted(() => {
+    //       //  console.log(ctx,localComponents);
+    //        Notify({text:'这是测试'});
+    //       //  ctx.$root.$Loading({type:true});
+    //       // ctx.$root.$Notify({text:'这是测试'});
+    // });
         const testClick=function(e){
           console.log('testClick',e);
           active.value = e;
