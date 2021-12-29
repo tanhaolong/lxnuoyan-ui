@@ -1,7 +1,7 @@
 <!--
  * @Author: 
  * @Date: 2021-12-03 14:13:15
- * @LastEditTime: 2021-12-29 14:02:17
+ * @LastEditTime: 2021-12-29 15:52:13
  * @LastEditors: tanhaolong
  * @Descripttion: 
 -->
@@ -27,6 +27,7 @@
     <Tabbar-item name="测试3" icon="icon-location">测试3</Tabbar-item>
     <Tabbar-item name="测试4" icon="icon-location">测试4</Tabbar-item>
   </Tabbar>
+  <Swipe></Swipe>
 </template>
 
 <script>
@@ -39,7 +40,7 @@ export default {
     // TabbarItem,
   },
   mounted(){
-    this.$Notify({text:'这是测试'});
+    // this.$Notify({text:'这是测试'});
   },
   setup(props,context) {
         const list = [{id:1,value:'测试内容1'},{id:2,value:'测试内容2'},{id:3,value:'测试内容3'}];
