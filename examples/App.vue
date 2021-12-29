@@ -1,7 +1,7 @@
 <!--
  * @Author: 
  * @Date: 2021-12-03 14:13:15
- * @LastEditTime: 2021-12-29 09:41:16
+ * @LastEditTime: 2021-12-29 14:02:17
  * @LastEditors: tanhaolong
  * @Descripttion: 
 -->
@@ -11,6 +11,10 @@
   <Rate @RateChange="testClick" />
   <Rate half @RateChange="testClick" />
   <Rate :value="3.2" mode="fill" readonly half @RateChange="testClick" />
+  <Tag type="primary">标签</Tag>
+  <Tag type="success">标签</Tag>
+  <Tag type="danger">标签</Tag>
+  <Tag type="warning">标签</Tag>
   <!-- <NavBar left-arrow left-text="返回" title="标题">
     <template  #right>
     <span>搜索</span>

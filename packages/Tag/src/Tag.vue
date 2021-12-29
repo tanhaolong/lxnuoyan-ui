@@ -1,13 +1,13 @@
 <!--
  * @Author: 
  * @Date: 2021-12-10 11:08:46
- * @LastEditTime: 2021-12-10 15:59:41
+ * @LastEditTime: 2021-12-29 14:03:45
  * @LastEditors: tanhaolong
  * @Descripttion: 
 -->
 <template>
   <div class="tag-box " :class="{'plain' : plain,'round' : round,'mark' : mark}" :style="{'backgroundColor': bgcolor == '' ? plain ? 'transparent' : typeStyle[type] : bgcolor,'color': color == '' ? plain ? typeStyle[type] : 'white' : color,'borderColor': plain ? color=='' ? typeStyle[type] : color : 'none','fontSize': size}">
-      <span class="tag-text">{{text}}</span> <i v-if="closeable" class="iconfont icon-guanbi" @click="CloseClick" :style="{'fontSize': size}"></i>
+      <span class="tag-text"><slot></slot><i v-if="closeable" class="iconfont icon-guanbi" @click="CloseClick" :style="{'fontSize': size}"></i></span> 
   </div>
 </template>
 
@@ -17,10 +17,6 @@ export default{
   components:{},
   name: 'Tag',
   props:{
-        text:{ // 显示文本
-            type:String,
-            default:'标签'
-        },
         plain:{ // 是否空心
             type:Boolean,
             default:false
