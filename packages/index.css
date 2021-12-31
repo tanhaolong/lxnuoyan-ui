@@ -25,3 +25,10 @@
 .lxnuoyan-wrapper-mask{
     background-color: rgba(0, 0, 0, 0.7) !important;
 }
+.swipe-item img{
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    background-color: #fff;
+    pointer-events: none;
+}

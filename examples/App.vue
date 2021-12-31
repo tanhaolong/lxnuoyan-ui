@@ -1,7 +1,7 @@
 <!--
  * @Author: 
  * @Date: 2021-12-03 14:13:15
- * @LastEditTime: 2021-12-29 15:52:13
+ * @LastEditTime: 2021-12-31 15:45:31
  * @LastEditors: tanhaolong
  * @Descripttion: 
 -->
@@ -27,7 +27,11 @@
     <Tabbar-item name="测试3" icon="icon-location">测试3</Tabbar-item>
     <Tabbar-item name="测试4" icon="icon-location">测试4</Tabbar-item>
   </Tabbar>
-  <Swipe></Swipe>
+  <Swipe class="swiper" style="height:300px;" :vertical="true">
+    <Swipe-item>1</Swipe-item>
+    <Swipe-item>2</Swipe-item>
+    <Swipe-item>3</Swipe-item>
+  </Swipe>
 </template>
 
 <script>
@@ -79,8 +83,14 @@ export default {
 
 <style lang="scss">
 body{
-margin: 0;
+  margin: 0;
   padding: 0;
+}
+.swiper .swipe-item{
+  background-color: #39a9ed;
+  text-align: center;
+  line-height: 220px;
+  color: white;
 }
 #app {
   overflow: hidden;
