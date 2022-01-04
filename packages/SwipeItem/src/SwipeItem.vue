@@ -1,12 +1,12 @@
 <!--
  * @Author: 
  * @Date: 2021-12-29 14:38:13
- * @LastEditTime: 2021-12-30 18:15:54
+ * @LastEditTime: 2022-01-04 17:27:17
  * @LastEditors: tanhaolong
  * @Descripttion: 
 -->
 <template>
-  <div class="swipe-item">
+  <div class="swipe-item" @click.stop="itemClick">
       <slot></slot>
   </div>
 </template>
@@ -18,7 +18,11 @@ export default{
   name: 'SwipeItem',
   props:{},
   setup(props,context){
+    const itemClick = function(){
+      context.emit('click');
+    };
     return {
+      itemClick,
     }
   },
 }

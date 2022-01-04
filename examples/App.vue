@@ -1,7 +1,7 @@
 <!--
  * @Author: 
  * @Date: 2021-12-03 14:13:15
- * @LastEditTime: 2021-12-31 15:45:31
+ * @LastEditTime: 2022-01-04 17:27:54
  * @LastEditors: tanhaolong
  * @Descripttion: 
 -->
@@ -27,10 +27,13 @@
     <Tabbar-item name="测试3" icon="icon-location">测试3</Tabbar-item>
     <Tabbar-item name="测试4" icon="icon-location">测试4</Tabbar-item>
   </Tabbar>
-  <Swipe class="swiper" style="height:300px;" :vertical="true">
-    <Swipe-item>1</Swipe-item>
-    <Swipe-item>2</Swipe-item>
+  <Swipe class="swiper" style="height:300px;" :height="250" :loop="true" :vertical="true" @change="testClick1" :initial-swipe="1">
+    <Swipe-item @click="testClick"><img src="https://img01.yzcdn.cn/vant/apple-1.jpg" alt=""></Swipe-item>
+    <Swipe-item><img src="https://img01.yzcdn.cn/vant/apple-3.jpg" alt=""></Swipe-item>
     <Swipe-item>3</Swipe-item>
+    <!-- <template #indicator>
+       <div class="custom-indicator">{{swiperIndex + 1}}/3</div>
+    </template> -->
   </Swipe>
 </template>
 
@@ -49,6 +52,7 @@ export default {
   setup(props,context) {
         const list = [{id:1,value:'测试内容1'},{id:2,value:'测试内容2'},{id:3,value:'测试内容3'}];
         const num = ref(0);
+        const swiperIndex = ref(0);
         const switchvalue = ref(false);
         const upstyle = {color:'red'};
         const active = ref('13');
@@ -61,16 +65,19 @@ export default {
     // });
         const testClick=function(e){
           console.log('testClick',e);
-          active.value = e;
+          // active.value = e;
         };
+        const testClick1 = function(e){console.log('testClick1',e),swiperIndex.value = e;};
         const testClick2 = function(e){switchvalue.value =!e;console.log('click2',switchvalue.value);}
         const CancelClick = function(){console.log('取消')}
         const ConfirmClick = function(){console.log('确认')};
     return {
         num,
         upstyle,
+        swiperIndex,
         switchvalue,
         testClick,
+        testClick1,
         testClick2,
         CancelClick,
         ConfirmClick,
