@@ -1,7 +1,7 @@
 <!--
  * @Author: 
  * @Date: 2021-12-03 14:13:34
- * @LastEditTime: 2021-12-29 11:00:55
+ * @LastEditTime: 2022-01-06 17:30:38
  * @LastEditors: tanhaolong
  * @Descripttion: 
 -->
@@ -12,10 +12,16 @@
 
 <p align="center">目前处于开发阶段，组件兼容问题及变动较大。请留意最新版本自行更新。</p>
 <p align="center">
-  🔥 <a href="https://gitee.com/tanhaolong/lxnuoyan-ui/wikis/%E4%BB%8B%E7%BB%8D">wiki文档</a>
+  🔥 <a href="https://gitee.com/tanhaolong/lxnuoyan-ui/wikis/%E4%BB%8B%E7%BB%8D">gitee wiki文档</a>
   &nbsp;
   &nbsp;
-  🚀 <a href="https://gitee.com/tanhaolong/lxnuoyan-ui" target="_blank">开源源码</a>
+  🚀 <a href="https://gitee.com/tanhaolong/lxnuoyan-ui" target="_blank">gitee源码</a>
+  &nbsp;
+  &nbsp;
+   🚀 <a href="https://github.com/z294326927/lxnuoyan-ui" target="_blank">gitHub源码</a>
+  &nbsp;
+  &nbsp;
+    🔥 <a href="https://github.com/z294326927/lxnuoyan-ui/wiki">gitHub wiki文档</a>
   &nbsp;
   &nbsp;
   🌈 <a href="https://www.npmjs.com/package/lxnuoyan-ui" target="_blank">npm</a>
