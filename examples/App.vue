@@ -1,7 +1,7 @@
 <!--
  * @Author: 
  * @Date: 2021-12-03 14:13:15
- * @LastEditTime: 2022-01-06 10:22:50
+ * @LastEditTime: 2022-01-07 16:32:51
  * @LastEditors: tanhaolong
  * @Descripttion: 
 -->
@@ -35,7 +35,11 @@
        <div class="custom-indicator">{{swiperIndex + 1}}/3</div>
     </template>
   </Swipe> -->
-  <Search v-model="testtext" />
+  <Search :show-action="true">
+    <!-- <template #action>
+    <div>搜索</div>
+  </template> -->
+  </Search>
 </template>
 
 <script>
