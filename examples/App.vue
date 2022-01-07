@@ -1,7 +1,7 @@
 <!--
  * @Author: 
  * @Date: 2021-12-03 14:13:15
- * @LastEditTime: 2022-01-04 17:27:54
+ * @LastEditTime: 2022-01-07 16:32:51
  * @LastEditors: tanhaolong
  * @Descripttion: 
 -->
@@ -21,20 +21,25 @@
   </template>
   </NavBar> -->
   <Ellipsis :lineClamp="2">的撒个回调事件开个黑担惊受恐干活就但是搞活动是个厉害快乐的时光鉴定考试了个巨坑代理商个的数据库过段时间看搞活艰苦的撒花鼓就巅峰时刻感觉还得沙鲁克汗个巨坑但是感觉刻度身高金卡戴珊高科技和</Ellipsis>
-  <Tabbar v-model="active" selectColor="red" :border="true" @tabbarChange="testClick">
+  <!-- <Tabbar v-model="active" selectColor="red" :border="true" @tabbarChange="testClick">
     <Tabbar-item name="测试1"  badge="2" icon="icon-user">测试1</Tabbar-item>
     <Tabbar-item name="测试2" dot icon="icon-location">测试2</Tabbar-item>
     <Tabbar-item name="测试3" icon="icon-location">测试3</Tabbar-item>
     <Tabbar-item name="测试4" icon="icon-location">测试4</Tabbar-item>
-  </Tabbar>
-  <Swipe class="swiper" style="height:300px;" :height="250" :loop="true" :vertical="true" @change="testClick1" :initial-swipe="1">
+  </Tabbar> -->
+  <!-- <Swipe class="swiper" style="height:300px;" :height="250" :loop="true" :vertical="true" @change="testClick1" :initial-swipe="1">
     <Swipe-item @click="testClick"><img src="https://img01.yzcdn.cn/vant/apple-1.jpg" alt=""></Swipe-item>
     <Swipe-item><img src="https://img01.yzcdn.cn/vant/apple-3.jpg" alt=""></Swipe-item>
-    <Swipe-item>3</Swipe-item>
-    <!-- <template #indicator>
+    <Swipe-item><img src="https://img01.yzcdn.cn/vant/apple-4.jpg" alt=""></Swipe-item>
+    <template #indicator>
        <div class="custom-indicator">{{swiperIndex + 1}}/3</div>
-    </template> -->
-  </Swipe>
+    </template>
+  </Swipe> -->
+  <Search :show-action="true">
+    <!-- <template #action>
+    <div>搜索</div>
+  </template> -->
+  </Search>
 </template>
 
 <script>
@@ -52,6 +57,7 @@ export default {
   setup(props,context) {
         const list = [{id:1,value:'测试内容1'},{id:2,value:'测试内容2'},{id:3,value:'测试内容3'}];
         const num = ref(0);
+        const testtext = ref('');
         const swiperIndex = ref(0);
         const switchvalue = ref(false);
         const upstyle = {color:'red'};
@@ -76,6 +82,7 @@ export default {
         upstyle,
         swiperIndex,
         switchvalue,
+        testtext,
         testClick,
         testClick1,
         testClick2,
