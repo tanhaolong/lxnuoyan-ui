@@ -1,7 +1,7 @@
 /*
  * @Author: 
  * @Date: 2021-12-13 15:18:30
- * @LastEditTime: 2021-12-13 18:06:38
+ * @LastEditTime: 2022-01-17 13:55:32
  * @LastEditors: tanhaolong
  * @Descripttion: 
  */
@@ -11,7 +11,7 @@
   * @Author: tanhaolong
   * @Date: 2021-12-13 15:34:08
   * @param {Number} num 需转换数字
-  * @param {Int} type 转换类型（CHINESENUMERAL：转换为中文大小写 、COMMASEPARATED：转换为逗号分割数字、UNCOMMASEPARATED：逗号分割数字转换为普通数字类型）
+  * @param {String} type 转换类型（CHINESENUMERAL：转换为中文大小写 、COMMASEPARATED：转换为逗号分割数字、UNCOMMASEPARATED：逗号分割数字转换为普通数字类型）
   * @return {Array} 返回组装好的分页数据
   */
 export default function Numeral ({num , type}){

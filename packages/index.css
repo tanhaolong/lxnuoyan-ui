@@ -1,4 +1,4 @@
-@import url('//at.alicdn.com/t/font_2997007_c5mopix7sh5.css');
+@import url('//at.alicdn.com/t/font_2997007_rcz78ex2qln.css');
 
 
 .app-mantle{
@@ -32,3 +32,10 @@
     background-color: #fff;
     pointer-events: none;
 }
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+    font-size: inherit;
+}
+p{
+    margin: 0;
+  }

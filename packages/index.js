@@ -1,7 +1,7 @@
 /*
  * @Author: 
  * @Date: 2021-12-03 14:26:48
- * @LastEditTime: 2022-01-05 15:59:02
+ * @LastEditTime: 2022-01-17 14:00:10
  * @LastEditors: tanhaolong
  * @Descripttion: 
  */
@@ -17,6 +17,7 @@ import Tag from "./Tag/index.js";
 import CountUp  from "./CountUp/index.js";
 import Ellipsis from "./Ellipsis/index.js";
 import Numeral from "./Numeral/index.js";
+import GetDate from "./GetDate/index.js";
 import Actionsheet from "./Actionsheet/index.js";
 import Switch from "./Switch/index.js";
 import Evaluate from "./Evaluate/index.js";
@@ -27,11 +28,13 @@ import TabbarItem from "./TabbarItem/index.js";
 import Swipe from "./Swipe/index.js";
 import SwipeItem from "./SwipeItem/index.js";
 import Search from './Search/index.js';
+import Steps from './Steps/index.js';
+import StepItem from './StepItem/index.js';
 import './index.css';
 
 // 存储组件列表
-const components = {Dialog,Cell,Empty,Tag,CountUp,Ellipsis,Actionsheet,Switch,Evaluate,Rate,NavBar,Tabbar,TabbarItem,Swipe,SwipeItem,Search};
-const commandcomponents = {Numeral,Notify,Toast,Loading};
+const components = {Dialog,Cell,Empty,Tag,CountUp,Ellipsis,Actionsheet,Switch,Evaluate,Rate,NavBar,Tabbar,TabbarItem,Swipe,SwipeItem,Search,Steps,StepItem};
+const commandcomponents = {GetDate,Numeral,Notify,Toast,Loading};
 
 // 定义 install 方法，接收 Vue 作为参数。如果使用 use 注册插件，则所有的组件都将被注册
 const install = function(Vue) {
@@ -50,7 +53,7 @@ const install = function(Vue) {
 if (typeof window !== "undefined" && window.Vue) {
   install(window.Vue);
 }
-export {Dialog,Cell,Empty,Tag,CountUp,Ellipsis,Actionsheet,Switch,Evaluate,Rate,NavBar,Tabbar,TabbarItem,Numeral,Notify,Toast,Loading,Swipe,SwipeItem,Search};
+export {Dialog,Cell,Empty,Tag,CountUp,Ellipsis,Actionsheet,Switch,Evaluate,Rate,NavBar,Tabbar,TabbarItem,Numeral,GetDate,Notify,Toast,Loading,Swipe,SwipeItem,Search,Steps,StepItem};
 export default {
   // 导出的对象必须具有 install，才能被 Vue.use() 方法安装
   install,
