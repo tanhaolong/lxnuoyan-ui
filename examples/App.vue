@@ -62,6 +62,7 @@ export default {
         const switchvalue = ref(false);
         const upstyle = {color:'red'};
         const active = ref('13');
+		console.log('E',Math.E);
         const { ctx } = getCurrentInstance(); //获取上下文实例
     //      onMounted(() => {
     //       //  console.log(ctx,localComponents);
@@ -69,10 +70,11 @@ export default {
     //       //  ctx.$root.$Loading({type:true});
     //       // ctx.$root.$Notify({text:'这是测试'});
     // });
-        const testClick=function(e){
-          console.log('testClick',e);
+        const testClick=function(money,num){
+			
           // active.value = e;
         };
+		ctx.$root.$RedEnvelopes(100,4,false);
         const testClick1 = function(e){console.log('testClick1',e),swiperIndex.value = e;};
         const testClick2 = function(e){switchvalue.value =!e;console.log('click2',switchvalue.value);}
         const CancelClick = function(){console.log('取消')}
